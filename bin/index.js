@@ -6,7 +6,7 @@ const cca = require("../lib/cca");
 const schema = require('../lib/schema');
 
 if (process.argv.length < 3) {
-  console.log("\nusage: create-controlle-app app_name [module1, module2, ...]\n");
+  console.log("\nUsage:\n\tcreate-controller-app app_name [module1, module2, ...]\n");
   process.exit(1);
 }
 

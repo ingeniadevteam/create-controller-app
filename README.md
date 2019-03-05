@@ -12,5 +12,5 @@ $ npm install --global @clysema/create-controller-app
 ## Usage
 
 ```bash
-create-controlle-app app_name [module1, module2, ...]
+create-controller-app app_name [module1, module2, ...]
 ```
