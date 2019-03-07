@@ -1,12 +1,43 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const prompt = require('prompt');
+const cliUsage = require('command-line-usage');
 
 const cca = require("../lib/cca");
 const schema = require('../lib/schema');
 
+const CLI_USAGE = '\`create-controller-app <app_name> [packages ...]\`';
+
+const sections = [
+  {
+    header: '🎮  Create controller app 🎮 ',
+    raw: true,
+    content: [
+      `{blue    ________                               }`,
+      `{blue   / ____/ /_  __________  ____ ___  ____ _}`,
+      `{blue  / /   / / / / / ___/ _ |/ __ '__ |/ __ '/}`,
+      `{blue / /___/ / /_/ (__  )  __/ / / / / / /_/ / }`,
+      `{blue |____/_/|__, /____/|___/_/ /_/ /_/|__,_/  }`,
+      `{blue        /____/                             }`,
+    ],
+  },
+  {
+    header: 'Usage',
+    content: `${CLI_USAGE}`
+  },
+  {
+    header: 'Aviable packages',
+    content: [
+      { colA: 'http', colB: 'HTTP/REST server'},
+      { colA: 'meteor', colB: 'SimpleDDP wrapper'},
+    ]
+  },
+];
+
+const usage = cliUsage(sections);
+
 if (process.argv.length < 3) {
-  console.log("\nUsage:\n\tcreate-controller-app app_name [module1, module2, ...]\n");
+  console.info(usage);
   process.exit(1);
 }
 
