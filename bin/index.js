@@ -71,6 +71,8 @@ prompt.get(schema, function (err, results) {
     // install the package
     cca.installNpmPackage(appName, moduleName);
   }
+  // resert repo
+  cca.resetRepo(appName);
 
   console.log(`
   All done!
