@@ -30,6 +30,8 @@ const sections = [
     content: [
       { colA: 'http', colB: 'HTTP/REST server'},
       { colA: 'meteor', colB: 'SimpleDDP wrapper'},
+      { colA: 'work', colB: 'Load and save working vars in files'},
+      { colA: 'brain', colB: 'Simple wrapper for brain.js'},
     ]
   },
 ];
